@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>sundarEduAI - Explore open source AI modals to enhance knowledge & save time!</title>
+    <meta content="An advanced AI learning models that helps you to get answers all questions of given topics. It's quite fast, easy-to-use & accurate. It'll be next-generation of edtech." name="description">
+    <meta content="edtech,educaton,learning,ai,advanced-ai" name="keywords">
+
+    <meta property="og:title" content="sundarEduAI - Explore open source AI modals to enhance knowledge & save time!">
+    <meta property="og:description" content="An advanced AI learning models that helps you to get answers all questions of given topics. It's quite fast, easy-to-use & accurate. It'll be next-generation of edtech.">
+    <meta property="og:type" content="article">
+
+    <!-- Favicons -->
+    <link href="/img/favicon.ico" rel="icon">
+    <link href="/img/favicon.ico" rel="apple-touch-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <!--===============================================================================================-->
+
+    <!-- Template Main CSS File -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+    input[type="url"] {
+        background-color: transparent;
+        font-family: 'Signika', sans-serif;
+        color: #333333;
+        font-size: 18px;
+    }
+    
+    .upload-box,
+    .form-control {
+        border: 1.5px solid rgba(218, 0, 55, 0.5);
+        border-radius: 8px;
+        padding: 16px 24px;
+    }
+    
+    .upload-box:hover,
+    .form-control:hover {
+        border: 1.5px solid rgba(218, 0, 55, 1);
+        cursor: pointer;
+    }
+    
+    .form-control:focus {
+        box-shadow: none;
+        outline: none;
+        border: 1.5px solid rgba(218, 0, 55, 1);
+    }
+    
+    .btn-submit {
+        width: 100%;
+        background-color: #DA0037;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 18px;
+        color: white;
+        font-family: 'Signika', sans-serif;
+    }
+    
+    .btn-submit:hover {
+        background-color: rgba(218, 0, 55, 0.8);
+    }
+    
+    .btn-submit:disabled {
+        background-color: rgba(218, 0, 55, 0.6);
+    }
+</style>
+
+<body style="height: 100vh !important;">
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex" style="background-color: #000000; padding: 10px 0;">
+
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between" style="max-width: 95%;">
+
+            <a href="/" class="logo d-flex align-items-center">
+                <!-- <img src="/img/logo40px5.png" alt=""> -->
+                <div id="back-btn" class="d-flex align-items-center justify-content-center">
+                    <img src="/img/ic_back.png" width="20" height="20" alt="Logo Pixel Light">
+                </div>
+            </a>
+
+            <div style="width: 100%;">
+                <p class="text-white" style="text-align: center; font-size: 20px;"><strong>Questions & Answers</strong> </p>
+            </div>
+
+            <button id="reset-btn" class="btn btn-primary" style="text-align: right;">Reset</button>
+
+            <!-- .navbar -->
+
+        </div>
+
+    </section>
+    <!-- End Hero -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex align-items-center p-0" style="background-color: rgba(218, 0, 55, 0.05);">
+
+        <div class="container">
+            <div class="row" style="margin-top: 50px; padding-bottom: 40px;">
+                <div class="col-lg-12 d-flex flex-column justify-content-center text-center">
+                    <h1>Get answers of your all <br>questions <span style="color: #DA0037;">few seconds</span></h1>
+                    <span style="font-size: 20px; opacity: 0.9;" class="mt-2 ml-4 mr-4">Try sundarEduAI to get answers of your all questions of given topics into simple text within few seconds. Quickly test this AI model by provide any YouTube video, local .txt file, or input text.</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+
+            <div class="row text-center justify-content-center">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center m-4 upload-box">
+                        <div style="width: 60px; padding: 10px 0; background-color: rgba(218, 0, 55, 0.2); border-radius: 8px;" class="align-items-center">
+                            <i style="font-size: 20px; color: #DA0037;" class="bi bi-youtube"></i>
+                        </div>
+                        <div style="text-align: left; width: 100%; margin-left: 20px;">
+                            <span style="font-size: 20px;">YouTube video url</span>
+                            <input type="url" name="youtube-url" id="youtube-url" placeholder="https://www.youtube.com/watch?v=BVgnIYSKUjY" style="width: 100%;">
+                        </div>
+                    </div>
+                    <input type="file" name="file" id="file" accept=".txt" hidden>
+                    <div class="d-flex align-items-center m-4 upload-box" id="upload-file-box">
+                        <div style="width: 60px; padding: 10px 0; background-color: rgba(218, 0, 55, 0.2); border-radius: 8px;" class="align-items-center">
+                            <i style="font-size: 20px; color: #DA0037;" class="bi bi-cloud-upload"></i>
+                        </div>
+                        <div style="text-align: left; width: 100%; margin-left: 20px;">
+                            <span style="font-size: 20px;">Upload your file</span>
+                            <p class="m-0 p-0" style="opacity: 0.5; font-size: 18px;" id="file-name">Browse your .txt file</p>
+                        </div>
+                    </div>
+                    <span>-- OR --</span>
+                    <div class="form-group m-4">
+                        <textarea style="resize: none; border-radius: 8px; font-size: 18px;" class="form-control" name="topic_text" id="topic_text" placeholder="Input all text from the chapter..." rows="6"></textarea>
+                    </div>
+                    <div class="align-items-center m-4">
+                        <button class="btn-submit" type="submit" id="submit-form" disabled>Next</button>
+                        <div id="loadingBar" class="spinner-border" style="color: #DA0037;" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- End About Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!--===============================================================================================-->
+    <script>
+        $(document).ready(function() {
+            $("#submit-form").show();
+            $("#loadingBar").hide();
+
+            var type = "";
+            var url = "";
+            var topic_text = "";
+
+            $("#upload-file-box").click(function() {
+                $("#file").click();
+            });
+
+            $("#file").change(function() {
+                var fileName = $(this).val();
+                if (fileName != "") {
+                    type = "file";
+
+                    $("#topic_text").val("");
+                    topic_text = "";
+                    $("#youtube-url").val("");
+                    url = "";
+
+                    $('#file-name').text(fileName.substring(fileName.lastIndexOf("\\")));
+                    $(':input[type="submit"]').prop('disabled', false);
+                } else {
+                    $('#file-name').text("Browse your .txt files");
+                    $(':input[type="submit"]').prop('disabled', true);
+                }
+            });
+
+            $("#youtube-url").change(function() {
+                var ytURL = $(this).val();
+                if (ytURL != "" && validateYouTubeUrl(ytURL)) {
+                    type = "youtube";
+                    url = ytURL;
+
+                    $("#topic_text").val("");
+                    topic_text = "";
+
+                    $('#file-name').text("Browse your .txt files");
+                    $(':input[type="submit"]').prop('disabled', false);
+                } else {
+                    $(':input[type="submit"]').prop('disabled', true);
+                }
+            });
+
+            $("#topic_text").change(function() {
+                var value = $(this).val();
+                if (value != "") {
+                    type = "text";
+                    topic_text = value;
+
+                    $("#youtube-url").val("");
+                    url = "";
+
+                    $('#file-name').text("Browse your .txt files");
+                    $(':input[type="submit"]').prop('disabled', false);
+                } else {
+                    $(':input[type="submit"]').prop('disabled', true);
+                }
+            });
+
+            $("#reset-btn").click(function() {
+                $('#youtube-url').val("");
+                $("#file").val("");
+                $("#topic_text").val("");
+                var type = "";
+                var url = "";
+                topic_text = "";
+                $('#file-name').text("Browse your .txt files");
+                $(':input[type="submit"]').prop('disabled', true);
+            });
+
+            $("#submit-form").click(function() {
+
+                if (type == "file") {
+                    var formData = new FormData();
+                    var files = $('#file')[0].files;
+
+                    // Check file selected or not
+                    if (files.length > 0) {
+                        $("#submit-form").hide();
+                        $("#loadingBar").show();
+
+                        var fr = new FileReader();
+                        fr.onload = function() {
+                            writeText(fr.result)
+                        }
+
+                        fr.readAsText(files[0]);
+                    }
+                } else if (type == "youtube") {
+                    // Check youtube url empty or not
+                    if (url != "" && validateYouTubeUrl(url)) {
+                        $("#submit-form").hide();
+                        $("#loadingBar").show();
+
+                        $.ajax({
+                            url: 'http://139.59.64.48:5044/youtube-mp3',
+                            type: 'POST',
+                            data: JSON.stringify({
+                                url: getYoutubeVideoId(url)
+                            }),
+                            dataType: 'JSON',
+                            contentType: "application/json",
+                        }).done(function(response) {
+                            // console.log(response)
+                            if (response.status == 200) {
+                                $.ajax({
+                                    url: 'upload_file',
+                                    type: 'POST',
+                                    data: "id=" + response.id + "&type=" + response.type,
+                                    dataType: 'JSON',
+                                }).done(function(response) {
+                                    // console.log(response)
+                                    if (response.status == 200) {
+                                        $.ajax({
+                                            url: 'transcript',
+                                            type: 'POST',
+                                            data: "upload_url=" + response.upload_url,
+                                            dataType: 'JSON',
+                                        }).done(function(response) {
+                                            console.log(response)
+                                            if (response.status == 200) {
+                                                $("#submit-form").show();
+                                                $("#loadingBar").hide();
+
+                                                writeText(response.transcript)
+                                            }
+                                        }).fail(function() {
+                                            console.log("AJAX Issue!")
+                                        })
+                                    }
+                                }).fail(function() {
+                                    console.log("AJAX Issue!")
+                                })
+                            }
+                        }).fail(function() {
+                            console.log("AJAX Issue!")
+                        })
+                    }
+                } else if (type == "text") {
+                    // Check topic text empty or not
+                    if (topic_text != "") {
+                        $("#submit-form").hide();
+                        $("#loadingBar").show();
+
+                        writeText(topic_text)
+                    }
+                }
+
+            });
+
+            function getYoutubeVideoId(url) {
+                VID_REGEX =
+                    /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+                return url.match(VID_REGEX)[1];
+            }
+
+            function validateYouTubeUrl(url) {
+                if (url) {
+                    var regExp = /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+                    if (url.match(regExp)) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function writeText(topic_text) {
+                $.ajax({
+                    url: 'http://139.59.64.48:5044/writeText',
+                    type: 'POST',
+                    data: JSON.stringify({
+                        topic_text: topic_text
+                    }),
+                    dataType: 'JSON',
+                    contentType: "application/json",
+                }).done(function(response) {
+                    // console.log(response)
+                    if (response.status == 200) {
+                        $("#submit-form").show();
+                        $("#loadingBar").hide();
+                        window.location = "answer-question/" + response.file_name + "/" + response.file_ext;
+                    }
+                }).fail(function() {
+                    console.log("AJAX Issue!")
+                })
+            }
+        });
+    </script>
+    <!--===============================================================================================-->
+
+</body>
+
+</html>

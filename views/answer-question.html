@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>sundarEduAI - Explore open source AI modals to enhance knowledge & save time!</title>
+    <meta content="An advanced AI learning models that helps you to get answers all questions of given topics. It's quite fast, easy-to-use & accurate. It'll be next-generation of edtech." name="description">
+    <meta content="edtech,educaton,learning,ai,advanced-ai" name="keywords">
+
+    <meta property="og:title" content="sundarEduAI - Explore open source AI modals to enhance knowledge & save time!">
+    <meta property="og:description" content="An advanced AI learning models that helps you to get answers all questions of given topics. It's quite fast, easy-to-use & accurate. It'll be next-generation of edtech.">
+    <meta property="og:type" content="article">
+
+    <!-- Favicons -->
+    <link href="/img/favicon.ico" rel="icon">
+    <link href="/img/favicon.ico" rel="apple-touch-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/css/util.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <!--===============================================================================================-->
+
+    <!-- Template Main CSS File -->
+    <link href="/css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+    .upload-box,
+    .form-control {
+        border: 1.5px solid rgba(218, 0, 55, 0.5);
+        border-radius: 8px;
+        padding: 16px 24px;
+    }
+    
+    .upload-box:hover,
+    .form-control:hover {
+        border: 1.5px solid rgba(218, 0, 55, 1);
+        cursor: pointer;
+    }
+    
+    .form-control:focus {
+        box-shadow: none;
+        outline: none;
+        border: 1.5px solid rgba(218, 0, 55, 1);
+    }
+    
+    .btn-submit {
+        width: 100%;
+        background-color: #DA0037;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 18px;
+        color: white;
+        font-family: 'Signika', sans-serif;
+    }
+    
+    .btn-submit:hover {
+        background-color: rgba(218, 0, 55, 0.8);
+    }
+    
+    .btn-submit:disabled {
+        background-color: rgba(218, 0, 55, 0.6);
+    }
+    
+    ol {
+        margin-left: 1.3em;
+    }
+    
+    li {
+        list-style-type: disc !important;
+        font-size: 1.4rem !important;
+        font-family: 'Signika', sans-serif;
+    }
+</style>
+
+<body>
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex" style="background-color: #000000; padding: 10px 0;">
+
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between" style="max-width: 95%;">
+
+            <button onclick="history.back()" class="logo d-flex align-items-center">
+                <!-- <img src="/img/logo40px5.png" alt=""> -->
+                <div id="back-btn" class="d-flex align-items-center justify-content-center">
+                    <img src="/img/ic_back.png" width="20" height="20" alt="Logo Pixel Light">
+                </div>
+            </button>
+
+            <div style="width: 100%;">
+                <p class="text-white" style="text-align: center; font-size: 18px;">
+                    <i style="padding: 3.5px 5.5px; font-size: 18px; border-radius: 100%; background-color: rgba(40, 167, 70, 0.2);" class="bi bi-check text-success"></i> <strong class="text-success mr-2"> File/text input  </strong> <i style="padding: 3.5px 5.5px; font-size: 18px; border-radius: 100%; background-color: rgba(255, 193, 7, 0.2);"
+                        class="bi bi-card-text text-warning"></i> <span class="text-warning" id="dynamic-status">Embedding</span></p>
+            </div>
+
+            <a href="/search-questions" id="start-btn" class="btn btn-primary" style="text-align: right;">Start</a>
+
+            <!-- .navbar -->
+
+        </div>
+
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section class="about">
+
+            <div class="container p-0" style="background-color: transparent;">
+                <div class="row text-center justify-content-center" id="loading-bar">
+                    <div class="col-md-4 text-center p-4 m-4">
+                        <img src="/img/loading_puzzle.gif" class="img-fluid" height="100" width="100">
+                        <h4 id="loading-title" class="m-2">File/text is being embed!</h4>
+                        <span id="loading-desc" style="font-size: 18px;">It'll take a few moments to embed, just wait!</span>
+                    </div>
+                </div>
+                <div class="row text-center justify-content-center m-3" id="answer-question-column">
+                    <div class="col-md-6 text-start p-3">
+                        <div class="form-group m-4">
+                            <textarea style="resize: none; border-radius: 8px; font-size: 18px;" class="form-control" name="question_text" id="question_text" placeholder="Input you questions line by line..." rows="6"></textarea>
+                        </div>
+                        <span>-- OR --</span>
+                        <input type="file" name="file" id="file" accept=".txt" hidden>
+                        <div class="d-flex align-items-center m-4 upload-box" id="upload-file-box">
+                            <div style="width: 60px; padding: 10px 0; background-color: rgba(218, 0, 55, 0.2); border-radius: 8px;" class="align-items-center">
+                                <i style="font-size: 20px; color: #DA0037;" class="bi bi-cloud-upload"></i>
+                            </div>
+                            <div style="text-align: left; width: 100%; margin-left: 20px;">
+                                <span style="font-size: 20px;">Upload your file</span>
+                                <p class="m-0 p-0" style="opacity: 0.5; font-size: 18px;" id="file-name">Browse your .txt file</p>
+                            </div>
+                        </div>
+                        <div class="align-items-center m-4">
+                            <button class="btn-submit" type="submit" id="submit-form" disabled>Next</button>
+                            <div id="loadingBar" class="spinner-border" style="color: #DA0037;" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="answer-column" class="col-md-6 text-start p-3">
+                        <h2 class="text-start m-4" style="text-align: start !important;">Results:</h2>
+                        <div class="m-4 text-start" style="text-align: start !important;" id="answers-text">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End About Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer p-4 m-0" style="background-color: transparent;">
+        <div class="container text-center">
+            <h3 class="mt-3">@sundarEduAI</h3>
+            <span class="mt-3">Made with love with Cohere</span>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!--===============================================================================================-->
+    <script>
+        $("#submit-form").show();
+        $("#answer-column").hide();
+        $("#loading-bar").show();
+        $("#answer-question-column").hide();
+        $("#loadingBar").hide();
+        $('#dynamic-status').text("Embedding");
+        $('#start-btn').hide();
+
+        var file_name = '<%=file_name%>';
+        var file_ext = '<%=file_ext%>';
+
+        var candidates = "";
+        var sentences = "";
+
+        $.ajax({
+            url: 'http://139.59.64.48:5044/embedText',
+            type: 'POST',
+            data: JSON.stringify({
+                file_name: file_name,
+                file_ext: file_ext
+            }),
+            dataType: 'JSON',
+            contentType: "application/json",
+        }).done(function(response) {
+            console.log(response)
+            if (response.status == 200) {
+                $("#submit-form").show();
+                $("#answer-column").hide();
+                $("#loading-bar").hide();
+                $("#answer-question-column").show();
+                $("#loadingBar").hide();
+
+                $('#start-btn').show();
+
+                $('#dynamic-status').text("Embedded");
+
+                candidates = response.candidates;
+                sentences = response.sentences;
+            }
+        }).fail(function() {
+            console.log("AJAX Issue!")
+        });
+
+
+        var type = "";
+        var question_text = "";
+
+        $("#upload-file-box").click(function() {
+            $("#file").click();
+        });
+
+        $("#file").change(function() {
+            var fileName = $(this).val();
+            if (fileName != "") {
+                type = "file";
+
+                $("#question_text").val("");
+                question_text = "";
+
+                $('#file-name').text(fileName.substring(fileName.lastIndexOf("\\")));
+                $(':input[type="submit"]').prop('disabled', false);
+            } else {
+                $('#file-name').text("Browse your .txt files");
+                $(':input[type="submit"]').prop('disabled', true);
+            }
+        });
+
+        $("#question_text").change(function() {
+            var value = $(this).val();
+            if (value != "") {
+                type = "text";
+                question_text = value;
+
+                $("#file").val("");
+                $('#file-name').text("Browse your .txt files");
+                $(':input[type="submit"]').prop('disabled', false);
+            } else {
+                $(':input[type="submit"]').prop('disabled', true);
+            }
+        });
+
+        $("#reset-btn").click(function() {
+            $("#file").val("");
+            $("#topic_text").val("");
+            var type = "";
+            question_text = "";
+            $('#file-name').text("Browse your .txt files");
+            $(':input[type="submit"]').prop('disabled', true);
+        });
+
+        $("#submit-form").click(function() {
+
+            if (candidates != "" && sentences != "") {
+                $('#dynamic-status').text("Searching");
+                if (type == "file") {
+                    var formData = new FormData();
+                    var files = $('#file')[0].files;
+
+                    // Check file selected or not
+                    if (files.length > 0) {
+                        $("#submit-form").hide();
+                        $("#loadingBar").show();
+
+
+                        var fr = new FileReader();
+                        fr.onload = function() {
+                            vectorSearch(fr.result)
+                        }
+
+                        fr.readAsText(files[0]);
+                    }
+                } else if (type == "text") {
+                    // Check question text empty or not
+                    if (question_text != "") {
+                        $("#submit-form").hide();
+                        $("#loadingBar").show();
+
+                        vectorSearch(question_text)
+
+                    }
+                }
+            }
+
+        });
+
+        // Function to call POST method to search
+        function vectorSearch(question_text) {
+            $.ajax({
+                url: 'http://139.59.64.48:5044/vectorSearch',
+                type: 'POST',
+                data: JSON.stringify({
+                    question_text: question_text,
+                    candidates: candidates,
+                    sentences: sentences
+                }),
+                dataType: 'JSON',
+                contentType: "application/json",
+            }).done(function(response) {
+                // console.log(response)
+                if (response.status == 200) {
+                    $("#submit-form").show();
+                    $("#loadingBar").hide();
+
+                    $('#answer-column').show();
+
+                    $('#dynamic-status').text("View Results");
+
+                    $("#answers-text").empty();
+
+                    response.similar_results.forEach((similar_result, index) => {
+                        appendString = '<p style="font-weight: bold; font-size: 1.4rem !important;">Q. ' + similar_result.question + '</p> <ol>';
+                        for (let i = 0; i < similar_result.answers.length; i++) {
+                            appendString = appendString + '<li>' + similar_result.answers[i] + '</li>';
+                        }
+                        appendString = appendString + "</ol>"
+                        $("#answers-text").append(appendString);
+
+
+                    });
+                }
+            }).fail(function() {
+                console.log("AJAX Issue!")
+            })
+        }
+    </script>
+    <!--===============================================================================================-->
+
+</body>
+
+</html>
