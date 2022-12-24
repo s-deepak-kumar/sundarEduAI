@@ -1,4 +1,5 @@
 # sundarEduAI
+sundarEduAI is an advanced AI learning tool which helps you to find answers of questions of given topics/chapters within few seconds. It also increase accessibility for users who want find solutions quickly. It's quite fast, easy-to-use & accurate. It'll be next-generation of edtech.
 ### Setup (NodeJs)
 1. Download whole code
 2. Copy **.env.example** file & rename it **.env**
